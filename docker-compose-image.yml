@@ -55,7 +55,7 @@ services:
       HOST: "http://localhost:3030"
       DOMAIN_MAP: "true"
       EXPIRES_IN: "7200"
-      BACKEND_HOST: "http://192.168.1.16:3000"
+      BACKEND_HOST: "http://localhost:3000"
       CONTACT_EMAIL: bryan.papa@sandmansystems.com
       MINISTER_NAME_AND_DESIGNATION: "\nHonorable Minister X\nMinister\nMinistry of Environment, Forestry & Tourism"
       CACHE_PROJECT_TTL: 60000
@@ -119,7 +119,7 @@ services:
       MRV_ENDPOINT: "http://192.168.123.20:9000"
       SYNC_ENABLE: false
       MRV_API_TOKEN: ""
-      BACKEND_HOST: "http://192.168.1.16:3000"
+      BACKEND_HOST: "http://localhost:3000"
     volumes:
       - filestore:/app/backend/services/public
   web:
