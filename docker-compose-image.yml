@@ -12,7 +12,7 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_PASSWORD: "<ANY PASSWORD>"
+      POSTGRES_PASSWORD: "09491651915A"
       POSTGRES_USER: root
       PSQL_USERNAME: root
       # POSTGRES_HOST_AUTH_METHOD: trust
@@ -32,17 +32,17 @@ services:
     environment:
       DB_HOST: db
       DB_USER: root
-      DB_PASSWORD: "<ANY PASSWORD>"
+      DB_PASSWORD: "09491651915A"
       RUN_MODULE: national-api
-      rootEmail: <ROOT EMAIL>
-      cfAdminEmail: <CLIMATE FUND ADMIN EMAIL>
-      exComAdminEmail: <EXCECUTIVE COMMITTEE ADMIN EMAIL>
-      systemCountryCode: "NG"
-      systemCountryName: "CountryX"
-      systemContinentName: "CountryX"
-      name: "Antactic Region"
-      climateFundName: "CountryX Climate Fund"
-      countryClimateFundName: "CountryX Climate Fund (Pvt) Ltd"
+      rootEmail: root-undp-sssi@sandmansystems.com
+      cfAdminEmail: cf-admin-undp-sssi@sandmansystems.com
+      exComAdminEmail: excom-admin-undp-sssi@sandmansystems.com
+      systemCountryCode: "PH"
+      systemCountryName: "Philippines"
+      systemContinentName: "Asia"
+      name: "SEA Region"
+      climateFundName: "Philippine Climate Fund"
+      countryClimateFundName: "Philippines Climate Fund (Pvt) Ltd"
       exComName: "Executive Committee"
       logoBase64: "sss"
       IS_EMAIL_DISABLED: "true"
@@ -56,7 +56,7 @@ services:
       DOMAIN_MAP: "true"
       EXPIRES_IN: "7200"
       BACKEND_HOST: "http://192.168.1.16:3000"
-      CONTACT_EMAIL: countryx@email.com
+      CONTACT_EMAIL: bryan.papa@sandmansystems.com
       MINISTER_NAME_AND_DESIGNATION: "\nHonorable Minister X\nMinister\nMinistry of Environment, Forestry & Tourism"
       CACHE_PROJECT_TTL: 60000
       CACHE_PROJECT_MAX: 100
@@ -87,7 +87,7 @@ services:
     environment:
       DB_HOST: db
       DB_USER: root
-      DB_PASSWORD: "<ANY PASSWORD>"
+      DB_PASSWORD: "09491651915A"
       RUN_PORT: 3100
       RUN_MODULE: analytics-api
       DOMAIN_MAP: "true"
@@ -102,12 +102,12 @@ services:
     environment:
       DB_HOST: db
       DB_USER: root
-      DB_PASSWORD: "<ANY PASSWORD>"
+      DB_PASSWORD: "09491651915A"
       # ,data-importer
       RUN_MODULE: replicator,async-operations-handler
       LOCATION_SERVICE: OPENSTREET
       SMTP_ENDPOINT: email-smtp.us-east-1.amazonaws.com
-      SMTP_USERNAME: ***REMOVED***
+      # SMTP_USERNAME: ***REMOVED***
       SMTP_PASSWORD: ""
       IS_EMAIL_DISABLED: "true"
       DISABLE_LOW_PRIORITY_EMAIL: "true"

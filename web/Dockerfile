@@ -37,9 +37,9 @@ RUN CI=false yarn build
 # production environment
 FROM nginx:stable-alpine
 COPY --from=build /app/dist /usr/share/nginx/html
-COPY ./web/docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod +x /docker-entrypoint.sh
+COPY ./web/docker-entrypoint.sh /docker-entrypoint.d/50-inject-env.sh
+RUN chmod +x /docker-entrypoint.d/50-inject-env.sh
 COPY ./web/nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE $PORT
+EXPOSE 3030
 CMD ["nginx", "-g", "daemon off;"]

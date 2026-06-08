@@ -12,7 +12,7 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_PASSWORD: "<ANY PASSOWORD>"
+      POSTGRES_PASSWORD: "09491651915A"
       POSTGRES_USER: root
       PSQL_USERNAME: root
       # POSTGRES_HOST_AUTH_METHOD: trust
@@ -31,19 +31,19 @@ services:
     environment:
       DB_HOST: db
       DB_USER: root
-      DB_PASSWORD: "<ANY PASSOWORD>"
+      DB_PASSWORD: "09491651915A"
       RUN_MODULE: national-api
-      rootEmail: <ROOT EMAIL>
-      cfAdminEmail: <CLIMATE FUND ADMIN EMAIL>
-      exComAdminEmail: <EXCECUTIVE COMMITTEE ADMIN EMAIL>
+      rootEmail: root-undp-sssi@sandmansystems.com
+      cfAdminEmail: cf-admin-undp-sssi@sandmansystems.com
+      exComAdminEmail: excom-admin-undp-sssi@sandmansystems.com
       Ministry: ""
       Department: ""
-      systemCountryCode: "NG"
-      systemCountryName: "CountryX"
-      systemContinentName: "CountryX"
-      countryClimateFundName: "CountryX Climate Fund (Pvt) Ltd"
-      name: "Antactic Region"
-      climateFundName: "Zimbabwe Climate Fund"
+      systemCountryCode: "PH"
+      systemCountryName: "Philippines"
+      systemContinentName: "Asia"
+      countryClimateFundName: "Philippines Climate Fund (Pvt) Ltd"
+      name: "SEA Region"
+      climateFundName: "Philippine Climate Fund"
       exComName: "Executive Committee"
       logoBase64: "sss"
       IS_EMAIL_DISABLED: "true"
@@ -56,7 +56,7 @@ services:
       EXPIRES_IN: "7200"
       REFRESH_TOKEN_EXPIRES_IN: "12h"
       BACKEND_HOST: "http://192.168.1.16:3000"
-      CONTACT_EMAIL: countryx@email.com
+      CONTACT_EMAIL: bryan.papa@sandmansystems.com
       MINISTER_NAME_AND_DESIGNATION: "\nHonorable Minister X\nMinister\nMinistry of Environment, Forestry & Tourism"
       CACHE_PROJECT_TTL: 60000
       CACHE_PROJECT_MAX: 100
@@ -86,7 +86,7 @@ services:
     environment:
       DB_HOST: db
       DB_USER: root
-      DB_PASSWORD: "<ANY PASSOWORD>"
+      DB_PASSWORD: "09491651915A"
       RUN_PORT: 3100
       RUN_MODULE: analytics-api
       DOMAIN_MAP: "true"
@@ -100,12 +100,12 @@ services:
     environment:
       DB_HOST: db
       DB_USER: root
-      DB_PASSWORD: "<ANY PASSOWORD>"
+      DB_PASSWORD: "09491651915A"
       # ,data-importer
       RUN_MODULE: replicator,async-operations-handler
       LOCATION_SERVICE: OPENSTREET
       SMTP_ENDPOINT: email-smtp.us-east-1.amazonaws.com
-      SMTP_USERNAME: ***REMOVED***
+      # SMTP_USERNAME: ***REMOVED***
       SMTP_PASSWORD: ""
       IS_EMAIL_DISABLED: "true"
       DISABLE_LOW_PRIORITY_EMAIL: "true"
@@ -130,10 +130,10 @@ services:
   #   environment:
   #     DB_HOST: db
   #     DB_USER: root
-  #     DB_PASSWORD: "<ANY PASSOWORD>"
+  #     DB_PASSWORD: "09491651915A"
   #     RUN_MODULE: async-operations-handler
   #     SMTP_ENDPOINT: email-smtp.us-east-1.amazonaws.com
-  #     SMTP_PASSWORD: "<ANY PASSOWORD>"
+  #     SMTP_PASSWORD: "09491651915A"
   #     ASYNC_OPERATIONS_TYPE: Database
   web:
     build:
@@ -143,10 +143,10 @@ services:
         PORT: 3030
         REACT_APP_BACKEND: http://localhost:3000
         REACT_APP_STAT_URL: http://localhost:3100
-        REACT_APP_COUNTRY_NAME: "CountryX"
+        REACT_APP_COUNTRY_NAME: "Philippines"
         REACT_APP_GOVERNMENT_MINISTRY: "Ministry Of Environment"
         REACT_APP_COUNTRY_FLAG_URL: "https://carbon-common-dev.s3.amazonaws.com/flag.png"
-        REACT_APP_COUNTRY_CODE: "NG"
+        REACT_APP_COUNTRY_CODE: "PH"
         REACT_APP_MAP_TYPE: "None"
         REACT_APP_MAPBOXGL_ACCESS_TOKEN: ""
     ports:
