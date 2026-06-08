@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/Fonts/Inter-SemiBold.woff2') format('woff2'),
+    /* Only serve WOFF,ttf if necessary. Otherwise,WOFF 2.0 will be served. */
+      url('/Fonts/Inter-SemiBold.woff') format('woff'),
+    url('/Fonts/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/Fonts/Inter-Bold.woff2') format('woff2'),
+    /* Only serve WOFF,ttf if necessary. Otherwise,WOFF 2.0 will be served. */
+      url('/Fonts/Inter-Bold.woff') format('woff'),
+    url('/Fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sohne-Breit';
+  src: url('/Fonts/SohneBreit-Dreiviertelfett.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/Fonts/Inter-Regular.woff2') format('woff2'),
+    /* Only serve WOFF,ttf if necessary. Otherwise,WOFF 2.0 will be served. */
+      url('/Fonts/Inter-Regular.woff') format('woff'),
+    url('/Fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/Fonts/Inter-Medium.woff2') format('woff2'),
+    /* Only serve WOFF,ttf if necessary. Otherwise,WOFF 2.0 will be served. */
+      url('/Fonts/Inter-Medium.woff') format('woff'),
+    url('/Fonts/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('/Fonts/MuseoSans-100.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('/Fonts/MuseoSans_700.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,43 @@
+import { CoreModule } from "@app/core";
+import { SharedModule } from "@app/shared";
+import { Logger, Module } from "@nestjs/common";
+import { RateLimiterModule } from "nestjs-rate-limiter";
+import { AuthController } from "./auth.controller";
+import { CompanyController } from "./company.controller";
+import { LocationController } from "./location.controller";
+import { NationalAPIController } from "./national.api.controller";
+import { NationalAPIService } from "./national.api.service";
+import { ProgrammeController } from "./programme.controller";
+import { SettingsController } from "./settings.controller";
+import { UserController } from "./user.controller";
+import { ProjectManagementController } from "./project-management.controller";
+import { DocumentManagementController } from "./document.controller";
+import { AnalyticsController } from "./analytics.controller";
+import { CreditTransactionsManagementController } from "./credit.transactions.management.controller";
+import { ReportsManagementController } from "./reports.management.controller";
+
+@Module({
+  imports: [
+    RateLimiterModule.register({
+      type: "Memory", // In-memory store for rate limiting
+    }),
+    SharedModule,
+    CoreModule,
+  ],
+  controllers: [
+    NationalAPIController,
+    UserController,
+    AuthController,
+    CompanyController,
+    ProgrammeController,
+    SettingsController,
+    LocationController,
+    ProjectManagementController,
+    DocumentManagementController,
+    AnalyticsController,
+    CreditTransactionsManagementController,
+    ReportsManagementController,
+  ],
+  providers: [NationalAPIService, Logger],
+})
+export class NationalAPIModule {}

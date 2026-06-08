@@ -1,0 +1,6 @@
+NAME,EMAIL,PHONE,ORGANISATION TAX ID,ORGANISATION TYPE(Government|Developer|Certifier|API),ROLE(admin|Manager|View),Password,APIKey
+Test User,bryan.papa+add@sandmansystems.com,,Government of the Philippines,Government,admin,123x,
+Test Dev,bryan.papa+dev@sandmansystems.com,,33333,Developer,admin,123x,
+Test Cert,bryan.papa+cet@sandmansystems.com,,44444,Certifier,admin,123x,
+Test API,bryan.papa+api@sandmansystems.com,,66666,API,admin,123x,cGFsaW5kYSthcGlAeGVwdGFnb24uY29tX19fMTIzNDU=
+Test Dev 2,bryan.papa+dev2@sandmansystems.com,,55555,Developer,admin,123x,

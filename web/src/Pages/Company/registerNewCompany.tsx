@@ -1,0 +1,70 @@
+import { useLocation, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+// import { AddNewCompanyComponent } from '@undp/carbon-library';
+import "./registerNewCompany.scss";
+import { Row, Col, Button } from "antd";
+import sliderLogo from "../../Assets/Images/logo-slider.png";
+import { AddNewCompanyComponent } from "../../Components/Company/AddNewCompany/addNewCompanyComponent";
+import { ROUTES } from "../../Config/uiRoutingConfig";
+
+const RegisterNewCompany = () => {
+  const navigate = useNavigate();
+  const { t } = useTranslation(["addCompany"]);
+
+  const maximumImageSize = import.meta.env.VITE_APP_MAXIMUM_FILE_SIZE
+    ? parseInt(import.meta.env.VITE_APP_MAXIMUM_FILE_SIZE)
+    : 1048576;
+
+  const onNavigateToHome = () => {
+    navigate("/", { replace: true });
+  };
+
+  return (
+    <div className="register-company-container">
+      <Row>
+        <Col md={18} lg={21} xs={17} flex="auto">
+          <div className="homepage-header-container">
+            <div
+              className="homepage-header-container-logo"
+              onClick={() => navigate("/")}
+            >
+              <div className="logo">
+                <img src={sliderLogo} alt="slider-logo" />
+              </div>
+              <div>
+                <div style={{ display: "flex" }}>
+                  <div className="title">
+                    {"CARBON MARKET DIGITAL PLATFORM"}
+                  </div>
+                  {/* <div className="title-sub">{'REGISTRY'}</div> */}
+                </div>
+                <div className="country-name">
+                  {import.meta.env.VITE_APP_COUNTRY_NAME || "CountryX"}
+                </div>
+              </div>
+            </div>
+          </div>
+        </Col>
+        <Col md={6} lg={3} xs={7} flex="auto">
+          <div className="homepage-button-container">
+            <div className="button">
+              <Button type="primary" onClick={() => navigate(ROUTES.LOGIN)}>
+                SIGN IN
+              </Button>
+            </div>
+          </div>
+        </Col>
+      </Row>
+      <AddNewCompanyComponent
+        t={t}
+        maximumImageSize={maximumImageSize}
+        useLocation={useLocation}
+        regionField
+        isGuest={true}
+        onNavigateToHome={onNavigateToHome}
+      ></AddNewCompanyComponent>
+    </div>
+  );
+};
+
+export default RegisterNewCompany;
