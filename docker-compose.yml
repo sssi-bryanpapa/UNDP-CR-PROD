@@ -148,8 +148,7 @@ services:
         REACT_APP_COUNTRY_FLAG_URL: "https://purecatamphetamine.github.io/country-flag-icons/3x2/PH.svg"
         REACT_APP_COUNTRY_CODE: "PH"
         REACT_APP_MAP_TYPE: "None"
-        REACT_APP_MAPBOXGL_ACCESS_TOKEN: ""
-        VITE_APP_GOOGLE_MAPS_API_KEY: ""
+        REACT_APP_MAPBOXGL_ACCESS_TOKEN: "pk.eyJ1Ijoic3NzaS1hZG1pbiIsImEiOiJjbXE2NWEwYjEwMnBuMnBxNDd5bzZrYWk2In0.Vr10C4YKpR77te0jMyNZwg"
     ports:
       - "3030:3030"
     depends_on:
