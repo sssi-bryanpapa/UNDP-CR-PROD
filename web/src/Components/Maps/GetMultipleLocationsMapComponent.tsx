@@ -37,7 +37,8 @@ const GetMultipleLocationsMapComponent = (
     ? import.meta.env.VITE_APP_MAPBOXGL_ACCESS_TOKEN
     : "";
 
-  console.log("---------------map accessToken-----------------", accessToken);
+  console.log("---------------map accessToken-----------------1", accessToken);
+  console.log(import.meta.env.MODE);
 
   const [projectLocations, setProjectLocations] = useState<any[][]>(
     existingCoordinate || []
